@@ -309,7 +309,7 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= yeoman.dist %>',
+          cwd: '<%= yeoman.app %>',
           src: ['*.html'],
           dest: '<%= yeoman.dist %>'
         }]
@@ -445,18 +445,18 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'wiredep',
+    //'wiredep',
     'useminPrepare',
-    'concurrent:dist',
-    'autoprefixer',
-    'ngtemplates',
+    //'concurrent:dist',
+    //'autoprefixer',
+    //'ngtemplates',
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'cdnify',
+    //'cdnify',
     'cssmin',
     'uglify',
-    'filerev',
+    //'filerev',
     'usemin',
     'htmlmin'
   ]);
